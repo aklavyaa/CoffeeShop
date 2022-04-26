@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShippingAddress">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/rootview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/heaing_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:padding="8dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textSize="23sp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:background="@color/green"
+                android:text="Shipping Address"
+                android:id="@+id/heading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical"
+            android:id="@+id/middleview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:backgroundTint="@color/black"
+                android:layout_marginTop="25dp"
+                android:hint="Your Name"
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:backgroundTint="@color/black"
+                android:layout_marginTop="10dp"
+                android:hint="Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:backgroundTint="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:hint="City"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:backgroundTint="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:hint="Pincode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:backgroundTint="@color/black"
+                android:layout_marginTop="10dp"
+                android:hint="Country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical"
+            android:id="@+id/billingview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:text="Billing Address"
+                android:id="@+id/text_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:backgroundTint="@color/black"
+                android:layout_marginTop="25dp"
+                android:hint="Your Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:backgroundTint="@color/black"
+                android:layout_marginTop="10dp"
+                android:hint="Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:backgroundTint="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:hint="City"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:backgroundTint="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:hint="Pincode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:backgroundTint="@color/black"
+                android:layout_marginTop="10dp"
+                android:hint="Country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+        </LinearLayout>
+
+
+        <CheckBox
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:checked="true"
+            android:text="Same as Billing Address"
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"
+            android:text="Submit"
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
