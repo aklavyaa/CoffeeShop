@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">CoffeeShopAndroid</string>
+
+
+    <string name="facebook_app_id">1361914750980557</string>
+    <string name="fb_login_protocol_scheme">fb1361914750980557</string>
+    <string name="facebook_client_token">78bd43b189310a40042558c53bb836b5</string>
+
+
+
 </resources>
