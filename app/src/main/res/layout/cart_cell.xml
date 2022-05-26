@@ -9,7 +9,9 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ImageView
+            android:id="@+id/image"
             android:layout_weight="1.2"
             android:scaleType="centerCrop"
             android:src="@drawable/coffee_splash"
@@ -34,6 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
             <TextView
+                android:id="@+id/qty"
                 android:textSize="18sp"
                 android:textStyle="normal"
                 android:layout_gravity="center_horizontal"
@@ -44,6 +47,7 @@
 
 
             <TextView
+                android:id="@+id/price"
                 android:textSize="18sp"
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/black"
@@ -56,8 +60,8 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/price_withqty"
             android:textStyle="bold"
-
             android:gravity="end|center"
             android:text="$17.99"
             android:textColor="@color/black"

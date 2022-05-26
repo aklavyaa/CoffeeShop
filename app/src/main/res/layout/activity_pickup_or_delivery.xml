@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".PickupOrDelivery">
 
     <RelativeLayout
@@ -63,11 +64,14 @@
         android:layout_height="wrap_content">
 
         <RadioButton
+            android:textColor="@color/black"
             android:text="Pickup"
             android:id="@+id/pickup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
         <RadioButton
+            android:textColor="@color/black"
             android:text="Delivery"
             android:id="@+id/delivery"
             android:layout_width="wrap_content"

@@ -5,8 +5,11 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
 
 public class CatAdapter extends RecyclerView.Adapter<CatAdapter.ViewHolder> {
 
@@ -19,8 +22,11 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.ViewHolder> {
      */
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
+        TextView catText;
         public ViewHolder(View view) {
             super(view);
+            catText = view.findViewById(R.id.text_coffee);
+
             // Define click listener for the ViewHolder's View
 
         }
@@ -30,8 +36,10 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.ViewHolder> {
 
     Context context;
 
-    public CatAdapter(Context context) {
+    private List<CategoryModel> list;
+    public CatAdapter(Context context, List<CategoryModel> list) {
         this.context = context;
+        this.list = list;
     }
 
     // Create new views (invoked by the layout manager)
@@ -49,9 +57,13 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.ViewHolder> {
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+
+         viewHolder.catText.setText(list.get(position).category);
+
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                CustomConstants.catId = list.get(position).id;
                 context.startActivity(new Intent(context,ProductList.class));
             }
         });
@@ -60,6 +72,6 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.ViewHolder> {
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return 5;
+        return list.size();
     }
 }

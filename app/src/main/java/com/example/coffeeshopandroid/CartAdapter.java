@@ -15,29 +15,31 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
+public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     /**
      * Provide a reference to the type of views that you are using
      * (custom ViewHolder).
      */
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-         TextView textCoffee,description,price;
+         TextView textCoffee,price,price_withqty,qty;
          ImageView imageView;
 
         public ViewHolder(View view) {
             super(view);
             textCoffee = view.findViewById(R.id.text_coffee);
-            description = view.findViewById(R.id.description);
             price = view.findViewById(R.id.price);
             imageView = view.findViewById(R.id.image);
+            price_withqty = view.findViewById(R.id.price_withqty);
+            qty = view.findViewById(R.id.qty);
+
         }
     }
 
 
     private Context context;
-    private List<ProductModel> list;
-    public ProductAdapter(Context context, List<ProductModel> list) {
+    private List<CartModel> list;
+    public CartAdapter(Context context, List<CartModel> list) {
         this.context = context;
         this.list = list;
     }
@@ -47,7 +49,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // Create a new view, which defines the UI of the list item
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.feature_recycler_cell, parent, false);
+                .inflate(R.layout.cart_cell, parent, false);
 
         return new ViewHolder(view);
     }
@@ -60,18 +62,11 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
 
        viewHolder.textCoffee.setText(list.get(position).getProductName());
-       viewHolder.description.setText(list.get(position).getProductDescription());
        viewHolder.price.setText("$"+list.get(position).getPrice());
+       viewHolder.qty.setText("Qty: "+list.get(position).getQty());
+       viewHolder.price_withqty.setText("$"+list.get(position).getTotalPrice());
+        Picasso.get().load(list.get(position).getProductImage()).placeholder(R.drawable.coffee_splash).error(R.drawable.coffee_spill).into(viewHolder.imageView);
 
-        Picasso.get().load(list.get(position).getProductImage()).placeholder(R.drawable.coffee_splash).error(R.drawable.coffee_spill).into(viewHolder.imageView
-        );
-       viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CustomConstants.productId = list.get(position).getProductId();
-                context.startActivity(new Intent(context,ProductDescription.class));
-            }
-        });
 
 
     }

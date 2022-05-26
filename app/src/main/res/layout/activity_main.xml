@@ -8,11 +8,11 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_marginRight="35dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="35dp"
+        android:layout_marginRight="35dp"
         android:orientation="vertical">
 
         <TextView
@@ -25,77 +25,78 @@
             android:textStyle="bold" />
 
         <TextView
-            android:textColor="@color/grey"
             android:id="@+id/sub_heading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Please fill in the below details for sign in" />
+            android:text="Please fill in the below details for sign in"
+            android:textColor="@color/grey" />
 
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:textColor="@color/black"
-            android:textColorHint="@color/grey"
-            android:backgroundTint="@color/black"
-            android:layout_marginTop="25dp"
-            android:hint="Username"
             android:id="@+id/user_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/black"
+            android:hint="Email"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey" />
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:textColor="@color/black"
-            android:textColorHint="@color/grey"
-            android:backgroundTint="@color/black"
-            android:layout_marginTop="18dp"
-            android:hint="Password"
             android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="@color/black"
+            android:hint="Password"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey" />
 
 
         <TextView
             android:id="@+id/text_forgot"
-            android:layout_gravity="right"
-            android:textColor="@color/black"
-            android:text="Forgot Password"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Forgot Password"
+            android:textColor="@color/black" />
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:textSize="18sp"
             android:id="@+id/sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
+            android:backgroundTint="@color/green"
             android:text="Sign In"
             android:textColor="@color/white"
-            android:backgroundTint="@color/green"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:textSize="18sp" />
+
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:layout_marginBottom="15dp"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentBottom="true"
-                android:textColor="@color/black"
-                android:text="Do you have account? Create Account!!"
                 android:id="@+id/signup"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:text="Do you have account? Create Account!!"
+                android:textColor="@color/black" />
 
         </RelativeLayout>
-
-
-
-
-
-
-
-
 
 
     </LinearLayout>
